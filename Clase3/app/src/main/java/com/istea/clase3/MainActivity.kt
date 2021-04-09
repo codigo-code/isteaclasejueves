@@ -1,5 +1,6 @@
 package com.istea.clase3
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             if(validarUsuario(userObject.name,userObject.pass)){
                 // deberia ir a mi actividad de inicio
                 Toast.makeText(this,"Tiene acceso a la aplicacion",Toast.LENGTH_LONG).show()
+                goToActity(this,InicioActivity::class.java)
 
             }else{
                 // deberia ir a registrar usuario
@@ -47,12 +49,17 @@ class MainActivity : AppCompatActivity() {
             // invico a la actividad RegistrarActivity
             // Intent(Donde Estoy Parado, A donde queior ir ::class.java)
             // Ej Intent(this,Algo::class.java)
-            val intento: Intent = Intent(this,RegistrarActivity::class.java)
-            startActivity(intento)
+
+            goToActity(this,RegistrarActivity::class.java)
         })
 
     }
 
+    // nos creamos un metodo generico donde le pasamos el contexto y la Actividad que queremos ir
+    fun <T>goToActity(context: Context,nuevaVista: Class<T>){
+        val intento: Intent = Intent(context,nuevaVista)
+        startActivity(intento)
+    }
 
 
     // tengo que generar un validador de usuario

@@ -15,8 +15,9 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="ingrese su peso"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,7 +30,7 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="ingrese su altura"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,9 +50,9 @@
 
     <ImageView
         android:id="@+id/i_foto"
-        android:layout_width="276dp"
-        android:layout_height="308dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="261dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
