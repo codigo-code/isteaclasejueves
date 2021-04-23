@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/e_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/e_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/e_numero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Celular"
+        android:inputType="phone" />
+
+    <RadioGroup
+        android:id="@+id/rg_sexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/r_femenino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fermenino" />
+
+        <RadioButton
+            android:id="@+id/r_masuclino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/r_otro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Otro" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/sp_rol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Switch
+        android:id="@+id/s_aceptar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aceptar  terminos y condiciones" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/b_guardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar" />
+
+    <Button
+        android:id="@+id/b_ver_usuarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Usuarios Guardados" />
+</LinearLayout>

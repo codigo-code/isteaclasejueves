@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 
 class InicioActivity : AppCompatActivity() {
 
@@ -33,6 +34,7 @@ class InicioActivity : AppCompatActivity() {
 
         var res = peso /(altura*altura)
 
+        Toast.makeText(this,res.toString(),Toast.LENGTH_LONG).show()
         if(res <= 18.4){
             return R.mipmap.flaco
         }else if(res >= 18.5 && res <= 24.9){
