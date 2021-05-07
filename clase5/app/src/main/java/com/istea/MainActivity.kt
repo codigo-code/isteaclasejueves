@@ -56,6 +56,18 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+
+        nombre.setOnFocusChangeListener(View.OnFocusChangeListener { v, hasFocus -> {
+            if(!hasFocus){
+                if(nombre.text.toString().equals("dante")){
+                    sexo_seleccionado = findViewById(R.id.r_otro)
+                    sexo_seleccionado.isEnabled= false
+                }
+            }
+        } })
+
+
+
     }
 
 
@@ -74,6 +86,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun getSexo(): RadioButton{
         sexo_seleccionado = findViewById(sexo.checkedRadioButtonId)
+
+
+
         return sexo_seleccionado
     }
 
